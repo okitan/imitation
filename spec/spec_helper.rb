@@ -1,9 +1,12 @@
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-require 'imitation'
 require 'spec'
-require 'spec/autorun'
+begin
+  require 'rr'
+rescue LoadError
+  require 'rubygems'
+  require 'rr'
+end
+require File.join(File.dirname(__FILE__), %w[ .. lib imitation])
 
 Spec::Runner.configure do |config|
-  
+  config.mock_with :rr
 end
