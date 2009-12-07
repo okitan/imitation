@@ -1,7 +1,7 @@
 require 'linguistics'
 Linguistics::use(:en)
 
-require 'core_ext/string'
+%w[ array string ].each {|f| require "core_ext/#{f}" }
 
 module Imitation
   def method_missing(name, *args, &block)

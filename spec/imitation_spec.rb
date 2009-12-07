@@ -47,12 +47,13 @@ describe 'Class which extend Imitation and defines CARP(the same form both in th
   
   it 'should respond carp with CARP.subset and not CARP.rand' do
     mock(Data::CARP).rand
-    do_not_allow(Data::CARP).rand
+    do_not_allow(Data::CARP).subset
     Data.carp
   end
 
   it 'should respond carp? with CARP.rand?' do
     mock(Data::CARP).rand?
+    do_not_allow(Data::CARP).subset?
     Data.carp?
   end
 
