@@ -4,15 +4,15 @@ random input generator for testing
 
 == Usage
 
-  class Data
+  class DataSet
     extend Imitation
   
     AUTHORS = %w[ okitan kuny okitakunio ]
   end
 
-  Data.author  #=> okitan, kuny or okitakunio
-  Data.author? #=> okitan, kuny, okitakunio or ''
-  Data.authors #=> e.g. %w[ okitan ], %w[ kuny okitakunio ]
+  DataSet.author  #=> okitan, kuny or okitakunio
+  DataSet.author? #=> okitan, kuny, okitakunio or ''
+  DataSet.authors #=> e.g. %w[ okitan ], %w[ kuny okitakunio ]
 
 
 == Copyright
